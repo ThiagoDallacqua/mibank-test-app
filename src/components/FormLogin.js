@@ -25,19 +25,19 @@ export default class FormLogin extends Component{
 
 
 
-    // fetch('https://mibankws.azurewebsites.net/connect/token', {
-    //   headers: new Headers({
-    //     'Content-type': 'application/x-www-form-urlencoded',
-    //     'Access-Control-Allow-Origin': '*',
-    //     'Accept': 'application/json'
-    //   }),
-    //   method: 'post',
-    //   mode: 'cors',
-    //   body: JSON.stringify(data),
-    // }).then(res => {
-    //   console.log(res);
-    // })
-    // .catch(err => console.log(err))
+    fetch('https://mibankws.azurewebsites.net/connect/token', {
+      headers: new Headers({
+        'Content-type': 'application/x-www-form-urlencoded',
+        'Access-Control-Allow-Origin': '*',
+        'Accept': 'application/json'
+      }),
+      method: 'post',
+      mode: 'cors',
+      body: JSON.stringify(data),
+    }).then(res => {
+      console.log(res);
+    })
+    .catch(err => console.log(err))
 
     // axios({
     //   method: 'post',
@@ -52,13 +52,13 @@ export default class FormLogin extends Component{
     //   console.log(res)
     // })
     // .catch(err => console.log(err))
-
-    $.ajaxSetup({
-      url: 'http://mibankws.azurewebsites.net/connect/token',
-      type: 'POST',
-      crossDomain: true,
-    });
-    $.ajax(data)
+    // $.ajax({
+    //   url: 'http://mibankws.azurewebsites.net/connect/token',
+    //   type: 'POST',
+    //   crossDomain: true,
+    //   data: data
+    // })
+    // .done(res => console.log(res))
   }
 
   render(){
