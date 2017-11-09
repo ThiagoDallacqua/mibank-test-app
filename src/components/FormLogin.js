@@ -31,6 +31,7 @@ export default class FormLogin extends Component{
         'Accept': 'application/json'
       }),
       method: 'post',
+      mode: 'cors',
       body: JSON.stringify(data),
     }).then(res => {
       console.log(res);
