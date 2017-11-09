@@ -24,7 +24,7 @@ export default class FormLogin extends Component{
 
 
 
-    fetch('http://mibankws.azurewebsites.net/connect/token', {
+    fetch('https://mibankws.azurewebsites.net/connect/token', {
       headers: new Headers({
         'Content-type': 'application/x-www-form-urlencoded',
         'Access-Control-Allow-Origin': '*',
